@@ -4,7 +4,7 @@ require 'yaml'
 Vagrant.configure("2") do |config|
 	settings = YAML::load(File.read("zerocooljs.yaml"))
 	config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-	config.vm.box = "zerocooljs/cento71Laravel"
+	config.vm.box = "zerocooljs/centos71Laravel"
 	config.vm.hostname = "laravel.zerocooljs"
 	config.vm.network :private_network, ip: settings["ip"] ||= "10.10.10.10"
 	config.vm.provider "virtualbox" do |vb|

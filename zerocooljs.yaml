@@ -5,10 +5,10 @@ cpus: 1
 name: "default"
 php_ide_config: yourservername
 
-authorize: .ssh/id_rsa.pub
+authorize: ~/.ssh/id_rsa.pub
 
 keys:
-    - .ssh/id_rsa
+    - ~/.ssh/id_rsa
 
 folders:
     - map: ~/Code
