@@ -3,6 +3,7 @@ ip: "10.10.10.10"
 memory: 2048
 cpus: 1
 name: "default"
+php_ide_config: yourservername
 
 authorize: .ssh/id_rsa.pub
 

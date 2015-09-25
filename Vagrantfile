@@ -75,6 +75,11 @@ Vagrant.configure("2") do |config|
         config.vm.synced_folder folder["map"], folder["to"], type: folder["type"] ||= nil, mount_options: mount_opts
       end
     end
+	if settings.has_key?("php_ide_config")
+	    config.vm.provision "shell" do |s|
+           s.inline = "export PHP_IDE_CONFIG=\"serverName=" + settings["php_ide_config"] + "\""
+        end
+    end
 	config.vm.provision "shell" do |s|
       s.inline = "/usr/local/bin/composer self-update"
     end
